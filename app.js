@@ -8,7 +8,6 @@ const axios = require('axios')
 const bodyParser = require('body-parser')
 const moment = require('moment');
 const timezone = require('moment-timezone')
-// moment().format(); 
 const port = 1900
 const APIkey = process.env.NODE_EXT_API 
 const URL = process.env.NODE_EXT_URL
@@ -72,10 +71,10 @@ const getWeather = async (cityList) => {
                       'city':response.data.name, 
                       'Local Time':time, 
                       'Weather':data.weather.main, 
-                      'Temperature':data.main.temp+' Celcius',
-                      'Feels Like':data.main.feels_like+' Celcius',
-                      'Min':data.main.temp_min+' Celcius',
-                      'Max':data.main.temp_max+' Celcius',
+                      'Temperature':data.main.temp+' Celsius',
+                      'Feels Like':data.main.feels_like+' Celsius',
+                      'Min':data.main.temp_min+' Celsius',
+                      'Max':data.main.temp_max+' Celsius',
                       'Humidity':data.main.humidity
                     }
                     resultList.push(JSONv)
